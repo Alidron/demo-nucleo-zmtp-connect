@@ -1,0 +1,3 @@
+[submodule "contiki-zmtp"]
+	path = contiki-zmtp
+	url = git@github.com:zeromq/contiki-zmtp.git
