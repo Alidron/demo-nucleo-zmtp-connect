@@ -7,7 +7,7 @@ Part of the demo run at FOSDEM talk.
 
 This demo use a Nucleo-Spirit1 node made of eval boards. It uses a ARM Cortex-M3 at 32MHz with a sub-1GHz RF module.
 
-The program of this demo connect to another similar node and interact with it. It uses ZMTP protocol with PUB/SUB sockets. When the user push the blue button of the Nucleo board, it toggles the blue light on the other node.
+The program of this demo connect to another similar node and interact with it. It uses the ZMTP protocol with PUB/SUB sockets. When the user push the blue button of the Nucleo board, it toggles the blue light on the other node.
 
 License and contribution policy
 ===============================
