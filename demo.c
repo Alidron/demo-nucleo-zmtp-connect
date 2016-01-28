@@ -1,3 +1,21 @@
+/* Copyright 2016 - Alidron's authors
+ *
+ * This file is part of Alidron.
+ *
+ * Alidron is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Alidron is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Alidron.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #include "sys/autostart.h"
 #include "sys/etimer.h"
 #include "zmq.h"
@@ -56,12 +74,9 @@ PROCESS_THREAD(demo, ev, data) {
 
     zmq_socket_init(&pub, ZMQ_PUB);
     zmq_connect(&pub, "aaaa::600:fbff:a2df:5d20", 8888);
-    // zmq_connect(&push, "aaaa::1", 9999);
-    // zmq_connect(&push, "fdfd::1", 9999);
 
     while(1) {
         PROCESS_WAIT_EVENT_UNTIL((ev == sensors_event) || (ev == zmq_socket_input_activity) || (ev == PROCESS_EVENT_POLL));
-        // PROCESS_WAIT_EVENT();
 
         if(ev == PROCESS_EVENT_POLL) {
             int nb_connected=0;
