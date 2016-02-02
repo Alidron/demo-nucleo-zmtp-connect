@@ -12,7 +12,7 @@ The program of this demo connect to another similar node and interact with it. I
 License and contribution policy
 ===============================
 
-This project is licensed under LGPLv3.
+This project is licensed under MPLv2.
 
 Contiki-zmtp is licensed under MPLv2.
 
